@@ -1,0 +1,16 @@
+<div class="container">
+  <h1>Ajouter une action</h1>
+  <form [formGroup]="actionForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label>Nom:</label> <input formControlName="Nom" />
+      <label>Objectif: </label><input formControlName="Objectif" />
+      <label for="Responsable">Member:</label>
+      <select [(ngModel)]="selectedMember" [ngModelOptions]="{standalone: true}" name="member" required>
+        <option *ngFor="let member of memberList" [value]="member.Nom">{{ member.Nom }}</option>
+      </select>
+      <label>Nombre de personnes</label><input type="number" formControlName="nbp">
+
+    </div>
+    <button type="submit" [disabled]="!actionForm.valid">+</button>
+  </form>
+</div>

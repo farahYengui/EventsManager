@@ -1,0 +1,33 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 30%;
+    margin: 100px auto;
+    padding: 20px;
+    border: solid 2px black;
+}
+form{
+    text-align: center;
+}
+form div{
+    display: grid;
+    grid-template-columns: repeat(2fr,200px);
+    justify-content: center;
+    align-items: center;
+}
+input,select{
+    height: 30px;
+    width: 200px;
+    margin: 10px;
+}
+button{
+    color: white;
+    background-color: black;
+    padding: 0px 6px;
+    font-size: xx-large;
+    border-radius: 50%;
+    cursor: pointer;
+}
